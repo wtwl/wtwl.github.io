@@ -1,0 +1,395 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../fonts/pnr.woff);
+}
+
+
+/* Border */
+.border {
+    border-top: 2px solid #19202e;
+    /* border-bottom: 2px solid #19202e; */
+    /* border-right: 2px solid transparent;
+    border-left: 2px solid transparent; */
+    box-shadow: 0 -2px 0px 1px #141824, 0 2px 0px 1px #282f41; 
+    width: 100%;
+    margin: 20px 0 0;
+}
+
+/* Rating */
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label:before {
+    font-family: fontAwesome;
+    content: "\f005";
+  }
+  
+  .rating label {
+    color: #ddd;
+    transition: .4s;
+  }
+  
+  .rating input:checked ~ label,
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ffab00;
+  }
+
+
+/* General */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Proxima Nova", Arial, sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #69738c;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Layout */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+
+header {
+    background-color: #2f364a;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    
+}
+
+.dec {
+    color: #1f2635;
+    font-size: .4em;
+    font-style: normal;
+}
+
+.top-nav a {
+    font-size: 13px;
+    padding: 16px 12px 14px;
+}
+
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #15a4fa;
+    margin-left: 6px;
+}
+
+
+
+.profile a {
+    color: white;
+}
+
+.profile img {
+    margin-left: 12px;
+    width: 28px;
+    height: 28px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+    max-height: 91vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    flex-shrink: 0;
+    max-width: 200px;
+    background-color: #1f2637;
+    overflow: hidden;
+    min-height: 91vh;
+}
+
+
+
+.add-book-button button {
+    border: 0;
+    outline: none;
+    background-color: #f2795a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 160px;
+    height: 44px;
+    border-radius: 4px;
+    margin: 35px 20px 17px; 
+    cursor: pointer;
+}
+.add-book-button i {
+    margin-right: 20px;
+}
+
+
+.main-nav {
+    align-items: stretch;
+    line-height: 1.7;
+}
+
+
+
+.main-nav a {
+    display: block;
+    font-size: 13px;
+    padding: 8px 20px;
+    width: 100%;
+}
+
+.main-nav i {
+    padding-right: 10px;
+}
+
+.main-nav a.active-link {
+    color: #fff;
+    background-color: #15a4fa;
+}
+
+/* bulletpoints */
+
+.filter-list a {
+    font-size: 13px;
+    display: block;
+    padding-top: 23px;
+    padding-left: 45px;
+}
+
+.filter-list li {
+    position: relative;
+}
+
+.filter-list li:nth-child(1)::before {
+    content: "\26AB";
+    color: #e64c66;
+    position: absolute;
+    top: 18px;
+    left: 23px;
+    font-size: .7em;
+}
+
+.filter-list li:nth-child(2)::before {
+    content: "\26AB";
+    color: #ffab00;
+    position: absolute;
+    top: 18px;
+    left: 23px;
+    font-size: .7em;
+}
+
+.filter-list li:nth-child(3)::before {
+    content: "\26AB";
+    color: #00bfdd;
+    position: absolute;
+    top: 18px;
+    left: 23px;
+    font-size: .7em;
+}
+
+.filter-list li:nth-child(4)::before {
+    content: "\26AB";
+    color: #7874cf;
+    position: absolute;
+    top: 18px;
+    left: 23px;
+    font-size: .7em;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #4f5a6f;
+}
+
+.history-record {
+    width: 70%;
+    margin-left: 45px;
+    margin-bottom: -14px;
+    padding-top: 32px;
+    line-height: 1.4;
+    position: relative;
+}
+
+.history-record p::before {
+    content: "\f017";
+    font-family: fontAwesome;
+    position: absolute;
+    top: 45px;
+    left: -25px;
+}
+
+
+.book-attr {
+    color: #62758c;
+}
+
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+
+.main-content-header {
+    background-color: #eef1f7;
+}
+
+.main-content-header h1 {
+    color: #444c63;
+    font-size: 22px;
+    font-weight: normal;
+    margin: 25px 20px;
+}
+
+.main-content-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.main-content-nav nav {
+    padding-left: 12px;
+}
+
+.main-content-nav a.active-filter {
+    color: #fff;
+    background: #97b3ce;
+    border-radius: 10px;
+    padding: 3px 10px;
+    display: block;
+}
+
+.main-content-nav nav li {
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.searchbox {
+    width: 35%;
+    position: relative;
+    margin-right: 23px;
+}
+
+.searchbox input {
+    border: 1px solid #c7cddb;
+    outline: none;
+    padding: 5px;
+    border-radius: 15px;
+    width: 100%;
+    text-indent: 10px;
+}
+
+.searchbox button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+    color: gray;
+}
+
+
+.book-grid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.book-grid-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.book-name {
+    color: #444c63;
+    font-size: 16px;
+}
+
+.book-author {
+    color: #6f7d95;
+    font-size: 12px;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #181e2c;
+}
+
+footer button {
+    color: white;
+    background-color: #1f2637;
+    padding: 15px 20px;
+    border: 0;
+    outline: none;
+}
+
+footer .question {
+    background-color: #15a4fa;
+}
